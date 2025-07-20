@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wather app</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1 class="card__title">Weather app</h1>
+        <p class="card__date">Today, <span id="date"></span></p>
+
+        <div class="card__search">
+            <input name="serch" type="text" class="card__input" placeholder="Enter sity name">
+            <button id="searchBtn" class="card__btn">
+                <img src="/icons/поиск.svg" alt="" class="icons-search">
+            </button>
+        </div>
+
+        <div class="card__weather">
+            <h2 id="city" class="card__title card__title--city">Tokio</h2>
+            <div class="card__block">
+                 <h3 class="card__title card__title--temp"></h3>
+                 <img src="" class="card__weather-icon" alt="Icon">
+            </div>
+        </div>
+
+        <div class="card__details">
+            <div class="card__col">
+                <?xml version="1.0"?><svg class="feather feather-wind" fill="none" height="24" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" />
+                </svg>
+                <p>Wind</p>
+                <p id="wind" class="card__info"></p>
+            </div>
+
+            <div class="card__col">
+                <?xml version="1.0"?><svg fill="currentColor" height="24" viewBox="-5 -1.5 24 24" width="24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 .565c4.667 6.09 7 10.423 7 13a7 7 0 1 1-14 0c0-2.577 2.333-6.91 7-13z" />
+                </svg>
+                <p>Hum</p>
+                <p id="humidity" class="card__info"></p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

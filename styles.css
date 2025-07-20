@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input,
+button {
+    border: 0;
+    outline: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Poppins;
+    color: white;
+}
+
+.card {
+    flex: 0 1 450px;
+    background: linear-gradient(#98c2f1, #698edd);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    height: 230px;
+    transition: all 0.5s;
+}
+
+.card__title {
+    font-size: 32px;
+}
+
+.card__title--city {
+    font-size: 45px;
+    font-weight: 400;
+}
+
+.card__title--temp {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.card__date {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.card__search {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.card__input {
+    padding: 10px 25px;
+    border-radius: 30px;
+    width: 100%;
+    font-size: 18px;
+    height: 40px;
+    background: white;
+}
+
+.card__btn {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    background: white;
+    cursor: pointer;
+}
+
+.icons-search {
+    width: 15px;
+    height: 10px;
+}
+
+.icons-search:hover {
+    transform: scale(1.4);
+}
+
+.card__weather {
+    transform: scale(0);
+    opacity: 0;
+}
+
+.card__block {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    margin-bottom: 20px;
+}
+
+.card__block img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.card__details {
+    padding: 0 20px;
+    max-width: 250px;
+    margin: 0px auto;
+}
+
+.card__col {
+    display: grid;
+    grid-template-columns: 20px 50px auto;
+    align-items: center;
+    text-align: left;
+    column-gap: 16px;
+}
+
+.card__col:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.card__info {
+    border-left: 1px solid white;
+    padding-left: 20px;
+}
+
+.card__col-info {
+    width: 20px;
+    flex: 0 0 20px;
+}
+
+.card.active .card__weather {
+    animation: show 0.5s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes show {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
